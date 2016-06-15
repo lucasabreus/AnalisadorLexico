@@ -18,9 +18,9 @@ branco [ \t\n]
 %%
 {abrecomentario} { ligado = 1; }
 {fechacomentario} { ligado = 0; }
-{operador} { if ( ligado == 0 ) printf("%s\n",yytext); }
-{simbolo} {  if ( ligado == 0 ) printf("%s\n",yytext); }
-{id} { if ( ligado == 0 ) printf("ID\n"); }
-{num} { if ( ligado == 0 ) printf("NUM\n"); }
+{operador} { if ( ligado == 0 ) printf("%s, ",yytext); }
+{simbolo} {  if ( ligado == 0 ) printf("%s, ",yytext); }
+{id} { if ( ligado == 0 ) printf("ID, "); }
+{num} { if ( ligado == 0 ) printf("NUM, "); }
 {branco} {}
 %%
