@@ -14,10 +14,11 @@ Analisador Flex para reconhecer a seguinte linguagem:
   - Simbolos especiais: 
         ```+ - * / < <= > >= == != = ; , ( ) [ ]```  { } /* */ 
   - Identificadores ID e NUM:
-    > **Letra** ``` [a-z]|[A-Z] ```  
-    > **Dígito** ``` [0-9]```  
-    > **ID** ``` {Letra}{letra}*```  
-    > **NUM** ``` {Dígito}{Dígito}*```  
+    
+    **Letra** ``` [a-z]|[A-Z] ```  
+    **Dígito** ``` [0-9]```  
+    **ID** ``` {Letra}{letra}*```  
+    **NUM** ``` {Dígito}{Dígito}*```  
 
 ### Execução
 
