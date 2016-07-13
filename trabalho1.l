@@ -16,11 +16,12 @@ num {digito}{digito}*
 branco [ \t\n]
 
 %%
-{abrecomentario} { ligado = 1; }
-{fechacomentario} { ligado = 0; }
-{operador} { if ( ligado == 0 ) printf("%s, ",yytext); }
-{simbolo} {  if ( ligado == 0 ) printf("%s, ",yytext); }
-{id} { if ( ligado == 0 ) printf("ID, "); }
-{num} { if ( ligado == 0 ) printf("NUM, "); }
-{branco} {}
+{abrecomentario} 	{ ligado = 1; }
+{fechacomentario} 	{ ligado = 0; }
+{operador} 			{ if ( ligado == 0 ) printf("Operador: %s\n",yytext); }
+{simbolo} 			{  if ( ligado == 0 ) printf("Simbolo: %s\n",yytext); }
+{id} 				{ if ( ligado == 0 ) printf("ID: %s\n",yytext); }
+{num} 				{ if ( ligado == 0 ) printf("NUM: %s\n",yytext); }
+{branco} 			{}
+. 					{ printf("Entrada inválida: %s\n",yytext); }
 %%
