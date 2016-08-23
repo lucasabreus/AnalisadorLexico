@@ -10,8 +10,15 @@ Analisador Flex para reconhecer a seguinte linguagem:
 
 ### Regras: 
 - Palavras Chave:
-       ```if else int void return while ```
-- Simbolos especiais: 	```ID``` ```{Letra}{letra}*``` ```{Dígito}{Dígito}* ``` 
+      ```if else int void return while ```
+  - Simbolos especiais: 
+        ```+ - * / < <= > >= == != = ; , ( ) [ ]```  { } /* */ 
+  - Identificadores ID e NUM:
+    
+    **Letra** ``` [a-z]|[A-Z] ```  
+    **Dígito** ``` [0-9]```  
+    **ID** ``` {Letra}{letra}*```  
+    **NUM** ``` {Dígito}{Dígito}*``` 
 
 ### Execução		
 Para executar será necessário ter instalado o Flex ou Lex [FLEX](http://flex.sourceforge.net/) e [GCC](https://gcc.gnu.org/)
